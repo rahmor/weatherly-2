@@ -1,0 +1,20 @@
+.Current {
+  background: url('../assets/sunny-day.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+}
+
+.Current > p:first-child {
+  display: flex;
+  justify-content: space-between;
+  font-size: 3rem;
+}
+
+.Current > p {
+  display: flex;
+}
+
+.Current > p:last-child {
+  display: flex;
+  justify-content: space-evenly;
+}

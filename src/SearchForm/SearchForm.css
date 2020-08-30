@@ -1,0 +1,37 @@
+.SearchForm {
+  padding-top: 1rem;
+}
+
+.SearchForm > * {
+  color: white;
+  background-color: rgba(135, 207, 235, 0);
+}
+
+.SearchForm__LocationArrow {
+  font-size: x-small;
+}
+
+.SearchForm__Search {
+  font-size: small;
+}
+
+.SearchForm > h6 {
+  padding: 0.5rem 0 0.5rem 0;
+  margin: 0;
+}
+
+.SearchForm input {
+  background-color: rgba(135, 207, 235, 0);
+  border: 0;
+  color: white;
+}
+
+.SearchForm input::placeholder {
+  color: white;
+}
+
+.SearchForm button {
+  background-color: rgba(135, 207, 235, 0);
+  border: 0;
+  color: white;
+}
