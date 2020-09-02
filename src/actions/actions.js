@@ -1,5 +1,5 @@
-import parseWeatherJSON from '../utilities/utilities';
-
+import { parseWeatherJSON } from '../utilities/utilities';
+import { change } from 'redux-form';
 const UPDATE_CITY = 'UPDATE CITY';
 const UPDATE_FETCHING = 'UPDATE FETCHING';
 const UPDATE_CURRENT = 'UPDATE CURRENT';
@@ -40,11 +40,11 @@ function fetchError() {
   };
 }
 
-function fetchWeather(coordinates = [40.7127281, -74.0060152]) {
+function fetchWeather(coordinates = [40.7127281, -74.0060152], city) {
   const WEATHER_LOCATION_ADDRESS = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates[0]}&lon=${coordinates[1]}&
   exclude={part}&units=imperial&appid=${API_KEY}`;
   return function (dispatch) {
-    dispatch(isFetching());
+    // dispatch(change('search', 'city', city));
     return fetch(WEATHER_LOCATION_ADDRESS)
       .then((response) => {
         if (response.ok) {
