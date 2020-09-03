@@ -1,5 +1,3 @@
-import { reducer as formReducer } from 'redux-form';
-
 function updateCityReducer(state = '', action) {
   switch (action.type) {
     case 'UPDATE CITY':
@@ -51,7 +49,6 @@ const reducers = {
   fetching: updateFetching,
   current: updateCurrentWeather,
   daily: updateDailyWeather,
-  form: formReducer,
 };
 
 export default reducers;

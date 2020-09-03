@@ -1,6 +1,6 @@
 import lodash from 'lodash';
 
-let parseWeatherJSON = (JSON) => {
+function parseWeatherJSON(JSON) {
   const ICON_ADDRESS = ` http://openweathermap.org/img/wn/${JSON.current.weather[0].icon}.png`;
   let CURRENT = {
     temp: Math.floor(JSON.current.temp),
@@ -12,7 +12,7 @@ let parseWeatherJSON = (JSON) => {
   };
   const DAILY = JSON.daily;
   return { CURRENT, DAILY };
-};
+}
 
 function parseUnixTime(unix) {
   return new Date(unix * 1000).toLocaleTimeString('en-us');

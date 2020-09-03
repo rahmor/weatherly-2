@@ -5,17 +5,17 @@ import SearchForm from '../SearchForm/SearchForm';
 import HourlyGraph from '../HourlyGraph/HourlyGraph';
 import { coordinates, city } from '../utilities/utilities';
 import { connect } from 'react-redux';
-import { fetchWeather, updateCity } from '../actions/actions';
+import { fetchWeather, fetchCoordinates, updateCity } from '../actions/actions';
 import './App.css';
 
 function App(props) {
   useEffect(() => {
     props.fetchWeather(coordinates, city);
   }, []);
-  console.log(city);
+
   return (
     <div className='App'>
-      <SearchForm props={{ ...props, city }} />
+      <SearchForm {...props} />
       <main>
         <Current {...props} />
         <HourlyGraph {...props} />
@@ -31,6 +31,7 @@ function mapStateToProps(state) {
 
 const mapDispatchToProps = {
   fetchWeather,
+  fetchCoordinates,
   updateCity,
 };
 

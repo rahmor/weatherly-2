@@ -5,7 +5,8 @@ const UPDATE_FETCHING = 'UPDATE FETCHING';
 const UPDATE_CURRENT = 'UPDATE CURRENT';
 const UPDATE_DAILY = 'UPDATE DAILY';
 const FETCH_ERROR = 'FETCH ERROR';
-const API_KEY = process.env.REACT_APP_WEATHER_API;
+const WEATHER_API_KEY = process.env.REACT_APP_WEATHER_API;
+const COORDINATES_API_KEY = process.env.REACT_APP_COORDINATES_API;
 
 function updateCity(city) {
   return {
@@ -40,11 +41,35 @@ function fetchError() {
   };
 }
 
+function fetchCoordinates(city) {
+  city.trim();
+  const COORIDINATES_URL = `https://api.opencagedata.com/geocode/v1/json?q=${city}&key=${COORDINATES_API_KEY}`;
+  return function (dispatch) {
+    return fetch(COORIDINATES_URL)
+      .then((response) => {
+        if (!response.ok) {
+          Promise.reject(response);
+        } else {
+          return response.json();
+        }
+      })
+      .then((data) => {
+        if (Object.keys(data).length === 0) {
+          dispatch(fetchError());
+          return Promise.resolve(data);
+        }
+        const coords = data.results[0].geometry;
+        dispatch(fetchWeather([coords.lat, coords.lng], city));
+        return Promise.resolve(data);
+      });
+  };
+}
+
 function fetchWeather(coordinates = [40.7127281, -74.0060152], city) {
   const WEATHER_LOCATION_ADDRESS = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates[0]}&lon=${coordinates[1]}&
-  exclude={part}&units=imperial&appid=${API_KEY}`;
+  exclude={part}&units=imperial&appid=${WEATHER_API_KEY}`;
   return function (dispatch) {
-    // dispatch(change('search', 'city', city));
+    dispatch(updateCity(city));
     return fetch(WEATHER_LOCATION_ADDRESS)
       .then((response) => {
         if (response.ok) {
@@ -58,6 +83,7 @@ function fetchWeather(coordinates = [40.7127281, -74.0060152], city) {
         const { CURRENT, DAILY } = parseWeatherJSON(data);
         dispatch(updateCurrentWeather(CURRENT));
         dispatch(updateDailyWeather(DAILY));
+        return Promise.resolve(data);
       })
       .catch(function (error) {
         dispatch(fetchError());
@@ -65,4 +91,4 @@ function fetchWeather(coordinates = [40.7127281, -74.0060152], city) {
   };
 }
 
-export { updateCity, fetchWeather };
+export { updateCity, fetchWeather, fetchCoordinates };
