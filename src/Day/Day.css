@@ -1,0 +1,8 @@
+.Day {
+  border-radius: 8px;
+  box-shadow: 0px 0px 5px -2px black, -0px -0px 5px -10px black;
+  margin: 8px 0 8px 0;
+  background-color: rgba(119, 83, 172, 0.25);
+  border: 1px solid white;
+  color: white;
+}

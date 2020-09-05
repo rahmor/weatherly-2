@@ -54,7 +54,10 @@ function fetchCoordinates(city) {
         }
       })
       .then((data) => {
-        if (Object.keys(data).length === 0) {
+        if (data === undefined) {
+          dispatch(fetchError());
+          return Promise.resolve(data);
+        } else if (Object.keys(data).length === 0) {
           dispatch(fetchError());
           return Promise.resolve(data);
         }
@@ -70,6 +73,7 @@ function fetchWeather(coordinates = [40.7127281, -74.0060152], city) {
   exclude={part}&units=imperial&appid=${WEATHER_API_KEY}`;
   return function (dispatch) {
     dispatch(updateCity(city));
+    dispatch(isFetching());
     return fetch(WEATHER_LOCATION_ADDRESS)
       .then((response) => {
         if (response.ok) {

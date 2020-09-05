@@ -1,18 +1,24 @@
 import React, { useState } from 'react';
+import lodash from 'lodash';
 import './Current.css';
 
-const Current = () => {
+const Current = ({ current }) => {
   return (
     <section className='Current'>
-      <p>
-        <span>79 &#176;</span>{' '}
-        <img src={require('../assets/weather-icon.png')}></img>
-      </p>
-      <p>Mostly Cloudy</p>
-      <p>
-        <span>Hi: 88 &#176;</span>
-        <span>Lo 62 &#176;</span>
-      </p>
+      <div className='Current__Conditions'>
+        <p>
+          <span className='Current__Conditions_Temp'>
+            {current.temp} &#176;
+          </span>{' '}
+        </p>
+        <p>{lodash.startCase(current.condition)}</p>
+        <p className='Current__Conditions_Hi_Temp'>
+          <span>Hi {current.hi} &#176;</span>
+          <span>&#183;</span>
+          <span>Lo {current.lo} &#176;</span>
+        </p>
+      </div>
+      <img src={require('../assets/weather-icon.png')}></img>
     </section>
   );
 };
