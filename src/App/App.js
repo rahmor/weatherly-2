@@ -15,12 +15,15 @@ function App(props) {
 
   return (
     <div className='App'>
-      <SearchForm city={props.city} fetchCoordinates={props.fetchCoordinates} />
       <main>
+        <SearchForm
+          city={props.city}
+          fetchCoordinates={props.fetchCoordinates}
+        />
         <Current current={props.current} />
         {/* <HourlyGraph {...props} /> */}
-        <Daily daily={props.daily} />
       </main>
+      <Daily daily={props.daily} />
     </div>
   );
 }

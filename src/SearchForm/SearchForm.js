@@ -52,7 +52,9 @@ let SearchForm = (props) => {
           ></FontAwesomeIcon>
         </button>
       </form>
-      <h6>{moment().format('MMMM Do YYYY, h:mm a')}</h6>
+      <p className='SearchForm__Date'>
+        {moment().format('MMMM Do YYYY, h:mm a')}
+      </p>
     </header>
   );
 };
