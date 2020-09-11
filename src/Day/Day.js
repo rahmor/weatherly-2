@@ -2,9 +2,15 @@ import React, { Component } from 'react';
 
 import './Day.css';
 
-const Day = ({ daily, i }) => {
+const Day = ({ daily, i, focusDaily }) => {
   return (
-    <div className='Day' key={i}>
+    <div
+      className='Day'
+      key={i}
+      onClick={() => {
+        focusDaily(daily);
+      }}
+    >
       <h3>
         {new Date(daily.dt * 1000).toLocaleDateString('en-us', {
           weekday: 'long',

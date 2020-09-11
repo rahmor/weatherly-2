@@ -14,6 +14,20 @@ function parseWeatherJSON(JSON) {
   return { CURRENT, DAILY };
 }
 
+function getCurrentFromDaily(JSON) {
+  const ICON_ADDRESS = ` http://openweathermap.org/img/wn/${JSON.weather[0].icon}.png`;
+
+  let CURRENT = {
+    temp: Math.floor(JSON.temp.min),
+    time: parseUnixTime(JSON.dt),
+    hi: Math.floor(JSON.temp.max),
+    lo: Math.floor(JSON.temp.min),
+    icon: ICON_ADDRESS,
+    condition: JSON.weather[0].description,
+  };
+  return CURRENT;
+}
+
 function parseUnixTime(unix) {
   return new Date(unix * 1000).toLocaleTimeString('en-us');
 }
@@ -32,4 +46,4 @@ const CITIESOBJECT = {
 const city = lodash.sample(Object.keys(CITIESOBJECT));
 let coordinates = CITIESOBJECT[city];
 
-export { coordinates, city, parseWeatherJSON };
+export { coordinates, city, parseWeatherJSON, getCurrentFromDaily };

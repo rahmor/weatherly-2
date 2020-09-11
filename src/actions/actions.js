@@ -1,4 +1,4 @@
-import { parseWeatherJSON } from '../utilities/utilities';
+import { parseWeatherJSON, getCurrentFromDaily } from '../utilities/utilities';
 import { change } from 'redux-form';
 const UPDATE_CITY = 'UPDATE CITY';
 const UPDATE_FETCHING = 'UPDATE FETCHING';
@@ -7,6 +7,13 @@ const UPDATE_DAILY = 'UPDATE DAILY';
 const FETCH_ERROR = 'FETCH ERROR';
 const WEATHER_API_KEY = process.env.REACT_APP_WEATHER_API;
 const COORDINATES_API_KEY = process.env.REACT_APP_COORDINATES_API;
+
+function focusDaily(JSON) {
+  return {
+    type: UPDATE_CURRENT,
+    payload: getCurrentFromDaily(JSON),
+  };
+}
 
 function updateCity(city) {
   return {
@@ -95,4 +102,4 @@ function fetchWeather(coordinates = [40.7127281, -74.0060152], city) {
   };
 }
 
-export { updateCity, fetchWeather, fetchCoordinates };
+export { updateCity, fetchWeather, fetchCoordinates, focusDaily };

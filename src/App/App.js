@@ -5,7 +5,12 @@ import SearchForm from '../SearchForm/SearchForm';
 import HourlyGraph from '../HourlyGraph/HourlyGraph';
 import { coordinates, city } from '../utilities/utilities';
 import { connect } from 'react-redux';
-import { fetchWeather, fetchCoordinates, updateCity } from '../actions/actions';
+import {
+  fetchWeather,
+  fetchCoordinates,
+  updateCity,
+  focusDaily,
+} from '../actions/actions';
 import './App.css';
 
 function App(props) {
@@ -23,7 +28,7 @@ function App(props) {
         <Current current={props.current} />
         {/* <HourlyGraph {...props} /> */}
       </main>
-      <Daily daily={props.daily} />
+      <Daily focusDaily={props.focusDaily} daily={props.daily} />
     </div>
   );
 }
@@ -36,6 +41,7 @@ const mapDispatchToProps = {
   fetchWeather,
   fetchCoordinates,
   updateCity,
+  focusDaily,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);
