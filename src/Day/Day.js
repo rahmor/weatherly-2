@@ -2,13 +2,13 @@ import React, { Component } from 'react';
 
 import './Day.css';
 
-const Day = ({ daily, i, focusDaily }) => {
+const Day = ({ daily, i, focusDaily, updateActive, active }) => {
   return (
     <div
-      className='Day'
-      key={i}
+      className={`Day ${i === active ? 'active' : null}`}
       onClick={() => {
         focusDaily(daily);
+        updateActive(i);
       }}
     >
       <h3>

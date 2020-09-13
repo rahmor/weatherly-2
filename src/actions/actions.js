@@ -5,6 +5,7 @@ const UPDATE_FETCHING = 'UPDATE FETCHING';
 const UPDATE_CURRENT = 'UPDATE CURRENT';
 const UPDATE_DAILY = 'UPDATE DAILY';
 const FETCH_ERROR = 'FETCH ERROR';
+const UPDATE_ACTIVE = 'UPDATE ACTIVE';
 const WEATHER_API_KEY = process.env.REACT_APP_WEATHER_API;
 const COORDINATES_API_KEY = process.env.REACT_APP_COORDINATES_API;
 
@@ -25,6 +26,13 @@ function updateCity(city) {
 function isFetching() {
   return {
     type: UPDATE_FETCHING,
+  };
+}
+
+function updateActive(i) {
+  return {
+    type: UPDATE_ACTIVE,
+    payload: i,
   };
 }
 
@@ -102,4 +110,4 @@ function fetchWeather(coordinates = [40.7127281, -74.0060152], city) {
   };
 }
 
-export { updateCity, fetchWeather, fetchCoordinates, focusDaily };
+export { updateCity, fetchWeather, fetchCoordinates, focusDaily, updateActive };

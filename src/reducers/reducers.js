@@ -34,6 +34,15 @@ function updateDailyWeather(state = [], action) {
   }
 }
 
+function isActive(state = null, action) {
+  switch (action.type) {
+    case 'UPDATE ACTIVE':
+      return action.payload;
+    default:
+      return state;
+  }
+}
+
 function fetchErrorReducer(state = false, action) {
   switch (action.type) {
     case 'FETCH ERROR':
@@ -49,6 +58,7 @@ const reducers = {
   fetching: updateFetching,
   current: updateCurrentWeather,
   daily: updateDailyWeather,
+  active: isActive,
 };
 
 export default reducers;
