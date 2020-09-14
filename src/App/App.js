@@ -11,6 +11,7 @@ import {
   updateCity,
   focusDaily,
   updateActive,
+  updateCurrentWeather,
 } from '../actions/actions';
 import './App.css';
 
@@ -26,7 +27,11 @@ function App(props) {
           city={props.city}
           fetchCoordinates={props.fetchCoordinates}
         />
-        <Current current={props.current} />
+        <Current
+          current={props.current}
+          searched={props.searched}
+          updateCurrentWeather={props.updateCurrentWeather}
+        />
         {/* <HourlyGraph {...props} /> */}
       </main>
       <Daily
@@ -49,6 +54,7 @@ const mapDispatchToProps = {
   updateCity,
   focusDaily,
   updateActive,
+  updateCurrentWeather,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);

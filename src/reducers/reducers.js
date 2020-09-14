@@ -16,6 +16,15 @@ function updateFetching(state = false, action) {
   }
 }
 
+function searchedCurrentWeather(state = {}, action) {
+  switch (action.type) {
+    case 'ADD CURRENT':
+      return action.payload;
+    default:
+      return state;
+  }
+}
+
 function updateCurrentWeather(state = {}, action) {
   switch (action.type) {
     case 'UPDATE CURRENT':
@@ -58,6 +67,7 @@ const reducers = {
   fetching: updateFetching,
   current: updateCurrentWeather,
   daily: updateDailyWeather,
+  searched: searchedCurrentWeather,
   active: isActive,
 };
 

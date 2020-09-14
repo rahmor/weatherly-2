@@ -2,9 +2,14 @@ import React, { useState } from 'react';
 import lodash from 'lodash';
 import './Current.css';
 
-const Current = ({ current }) => {
+const Current = ({ current, searched, updateCurrentWeather }) => {
   return (
-    <section className='Current'>
+    <section
+      onClick={() => {
+        updateCurrentWeather(searched);
+      }}
+      className='Current'
+    >
       <div className='Current__Conditions'>
         <p>
           <span className='Current__Conditions_Temp'>

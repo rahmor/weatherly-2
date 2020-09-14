@@ -1,5 +1,6 @@
 import { parseWeatherJSON, getCurrentFromDaily } from '../utilities/utilities';
 import { change } from 'redux-form';
+const ADD_CURRENT = 'ADD CURRENT';
 const UPDATE_CITY = 'UPDATE CITY';
 const UPDATE_FETCHING = 'UPDATE FETCHING';
 const UPDATE_CURRENT = 'UPDATE CURRENT';
@@ -13,6 +14,13 @@ function focusDaily(JSON) {
   return {
     type: UPDATE_CURRENT,
     payload: getCurrentFromDaily(JSON),
+  };
+}
+
+function searchedCurrentWeather(current) {
+  return {
+    type: ADD_CURRENT,
+    payload: current,
   };
 }
 
@@ -100,6 +108,7 @@ function fetchWeather(coordinates = [40.7127281, -74.0060152], city) {
       .then((data) => {
         dispatch(isFetching());
         const { CURRENT, DAILY } = parseWeatherJSON(data);
+        dispatch(searchedCurrentWeather(CURRENT));
         dispatch(updateCurrentWeather(CURRENT));
         dispatch(updateDailyWeather(DAILY));
         return Promise.resolve(data);
@@ -110,4 +119,11 @@ function fetchWeather(coordinates = [40.7127281, -74.0060152], city) {
   };
 }
 
-export { updateCity, fetchWeather, fetchCoordinates, focusDaily, updateActive };
+export {
+  updateCity,
+  fetchWeather,
+  fetchCoordinates,
+  focusDaily,
+  updateActive,
+  updateCurrentWeather,
+};
