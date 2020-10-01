@@ -1,6 +1,7 @@
 .Current {
-  background: url('../assets/sunny-day.jpg') no-repeat center center fixed;
-
+  background-image: url('../assets/backgrounds/few-clouds-grass-small.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
   background-size: cover;
   color: white;
   padding: 1rem;
@@ -41,9 +42,15 @@
 
 @media only screen and (min-width: 768px) {
   .Current {
+    background-image: url('../assets/backgrounds/few-clouds-grass-large.jpg');
     order: 0;
     height: 50vh;
     border-radius: 8px 8px 0px 0px;
     box-shadow: none;
+  }
+
+  .Current img {
+    max-width: 200px;
+    max-height: 200px;
   }
 }
