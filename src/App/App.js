@@ -13,6 +13,8 @@ import {
   updateActive,
   updateCurrentWeather,
 } from '../actions/actions';
+import CONDITIONS from '../utilities/conditions';
+import useMediaQuery from '../hooks/useMediaQuery';
 import './App.css';
 
 function App(props) {
@@ -20,8 +22,13 @@ function App(props) {
     props.fetchWeather(coordinates, city);
   }, []);
 
+  const matches = useMediaQuery('(min-width: 768px)');
+
   return (
-    <div className='App'>
+    <div
+      className='App'
+      style={style.background(props.fetched, matches, props.current.icon)}
+    >
       <main>
         <SearchForm
           city={props.city}
@@ -31,6 +38,7 @@ function App(props) {
           current={props.current}
           searched={props.searched}
           updateCurrentWeather={props.updateCurrentWeather}
+          fetched={props.fetched}
         />
         {/* <HourlyGraph {...props} /> */}
       </main>
@@ -43,6 +51,26 @@ function App(props) {
     </div>
   );
 }
+
+const style = {
+  background: (fetched, matches, icon) => {
+    if (fetched && matches) {
+      return {
+        background: `url('https://i.ibb.co/${CONDITIONS[icon].large}/${CONDITIONS[icon].images}-medium.jpg') no-repeat center center`,
+        backgroundSize: `cover`,
+        backgroundAttachment: `fixed`,
+      };
+    } else if (fetched) {
+      return {
+        backgroundColor: `${CONDITIONS[icon].color}`,
+      };
+    } else {
+      return {
+        backgroundImage: 'linear-gradient(#7753ac, #d98cb3 25%)',
+      };
+    }
+  },
+};
 
 function mapStateToProps(state) {
   return state;

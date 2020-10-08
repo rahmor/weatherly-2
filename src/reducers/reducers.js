@@ -52,6 +52,15 @@ function isActive(state = null, action) {
   }
 }
 
+function doneFetching(state = false, action) {
+  switch (action.type) {
+    case 'DONE FETCHING':
+      return !state;
+    default:
+      return state;
+  }
+}
+
 function fetchErrorReducer(state = false, action) {
   switch (action.type) {
     case 'FETCH ERROR':
@@ -69,6 +78,7 @@ const reducers = {
   daily: updateDailyWeather,
   searched: searchedCurrentWeather,
   active: isActive,
+  fetched: doneFetching,
 };
 
 export default reducers;

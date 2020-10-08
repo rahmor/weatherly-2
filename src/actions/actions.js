@@ -7,6 +7,7 @@ const UPDATE_CURRENT = 'UPDATE CURRENT';
 const UPDATE_DAILY = 'UPDATE DAILY';
 const FETCH_ERROR = 'FETCH ERROR';
 const UPDATE_ACTIVE = 'UPDATE ACTIVE';
+const DONE_FETCHING = 'DONE FETCHING';
 const WEATHER_API_KEY = process.env.REACT_APP_WEATHER_API;
 const COORDINATES_API_KEY = process.env.REACT_APP_COORDINATES_API;
 
@@ -34,6 +35,12 @@ function updateCity(city) {
 function isFetching() {
   return {
     type: UPDATE_FETCHING,
+  };
+}
+
+function doneFetching() {
+  return {
+    type: DONE_FETCHING,
   };
 }
 
@@ -68,6 +75,7 @@ function fetchCoordinates(city) {
   city.trim();
   const COORIDINATES_URL = `https://api.opencagedata.com/geocode/v1/json?q=${city}&key=${COORDINATES_API_KEY}`;
   return function (dispatch) {
+    dispatch(doneFetching());
     return fetch(COORIDINATES_URL)
       .then((response) => {
         if (!response.ok) {
@@ -111,6 +119,7 @@ function fetchWeather(coordinates = [40.7127281, -74.0060152], city) {
         dispatch(searchedCurrentWeather(CURRENT));
         dispatch(updateCurrentWeather(CURRENT));
         dispatch(updateDailyWeather(DAILY));
+        dispatch(doneFetching());
         return Promise.resolve(data);
       })
       .catch(function (error) {
