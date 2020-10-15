@@ -1,13 +1,12 @@
 import React, { useState } from 'react';
 import lodash from 'lodash';
+import CONDITIONS from '../utilities/conditions';
 import './Current.css';
 
-const Current = ({ current, searched, updateCurrentWeather }) => {
+const Current = ({ current, searched, updateCurrentWeather, fetched }) => {
   return (
     <section
-      onClick={() => {
-        updateCurrentWeather(searched);
-      }}
+      style={style.background(current.icon, fetched)}
       className='Current'
     >
       <div className='Current__Conditions'>
@@ -23,9 +22,25 @@ const Current = ({ current, searched, updateCurrentWeather }) => {
           <span>Lo {current.lo} &#176;</span>
         </p>
       </div>
-      <img src={require('../assets/weather-icon.png')}></img>
+      <img
+        src={`http://openweathermap.org/img/wn/${current.icon}@4x.png`}
+        srcset={`http://openweathermap.org/img/wn/${current.icon}@2x.png 100w, 
+        http://openweathermap.org/img/wn/${current.icon}@4x.png 200w`}
+        sizes={`(min-width:768) 100w , 200w`}
+        alt='Weather Icon'
+      ></img>
     </section>
   );
 };
 
+const style = {
+  background: (icon, fetched) => {
+    if (fetched) {
+      return {
+        background: `url('https://i.ibb.co/${CONDITIONS[icon].small}/${CONDITIONS[icon].image}-small.jpg') no-repeat center center/cover`,
+        transition: `background 1s ease`,
+      };
+    }
+  },
+};
 export default Current;

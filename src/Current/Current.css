@@ -1,5 +1,4 @@
 .Current {
-  background-image: url('../assets/backgrounds/few-clouds-grass-small.jpg');
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -15,6 +14,11 @@
 
 .Current * {
   margin: 0;
+}
+
+.Current img {
+  max-width: 100px;
+  max-height: 100px;
 }
 
 .Current__Conditions {
@@ -42,7 +46,6 @@
 
 @media only screen and (min-width: 768px) {
   .Current {
-    background-image: url('../assets/backgrounds/few-clouds-grass-large.jpg');
     order: 0;
     height: 50vh;
     border-radius: 8px 8px 0px 0px;

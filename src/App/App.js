@@ -56,9 +56,8 @@ const style = {
   background: (fetched, matches, icon) => {
     if (fetched && matches) {
       return {
-        background: `url('https://i.ibb.co/${CONDITIONS[icon].large}/${CONDITIONS[icon].images}-medium.jpg') no-repeat center center`,
-        backgroundSize: `cover`,
-        backgroundAttachment: `fixed`,
+        background: `url('https://i.ibb.co/${CONDITIONS[icon].large}/${CONDITIONS[icon].image}-medium.jpg') no-repeat center center/cover fixed`,
+        transition: `background 1s ease-in-out`,
       };
     } else if (fetched) {
       return {
