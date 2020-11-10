@@ -24,7 +24,7 @@ const Current = ({ current, searched, updateCurrentWeather, fetched }) => {
       </div>
       <img
         src={`http://openweathermap.org/img/wn/${current.icon}@4x.png`}
-        srcset={`http://openweathermap.org/img/wn/${current.icon}@2x.png 100w, 
+        srcSet={`http://openweathermap.org/img/wn/${current.icon}@2x.png 100w, 
         http://openweathermap.org/img/wn/${current.icon}@4x.png 200w`}
         sizes={`(min-width:768) 100w , 200w`}
         alt='Weather Icon'
