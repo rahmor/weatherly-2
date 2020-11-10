@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`< App /> component should match snapshot 1`] = `
+<div
+  className="App"
+  style={
+    Object {
+      "backgroundImage": "linear-gradient(#7753ac, #d98cb3 25%)",
+    }
+  }
+>
+  <main>
+    <SearchForm />
+    <Current
+      current={
+        Object {
+          "condition": "clear sky",
+          "hi": 74,
+          "icon": "01d",
+          "lo": 55,
+          "temp": 74,
+          "time": "12:41:09 PM",
+        }
+      }
+    />
+  </main>
+  <Daily />
+</div>
+`;

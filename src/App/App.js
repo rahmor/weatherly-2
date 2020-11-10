@@ -17,7 +17,7 @@ import CONDITIONS from '../utilities/conditions';
 import useMediaQuery from '../hooks/useMediaQuery';
 import './App.css';
 
-function App(props) {
+export function App(props) {
   useEffect(() => {
     props.fetchWeather(coordinates, city);
   }, []);
