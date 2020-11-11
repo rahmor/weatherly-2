@@ -33,7 +33,7 @@ const Current = ({ current, searched, updateCurrentWeather, fetched }) => {
   );
 };
 
-const style = {
+export const style = {
   background: (icon, fetched) => {
     if (fetched) {
       return {

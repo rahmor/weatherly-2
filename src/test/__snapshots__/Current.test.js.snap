@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Current> component should match snapshot 1`] = `
+<section
+  className="Current"
+  style={
+    Object {
+      "background": "url('https://i.ibb.co/4N6HxcD/clear-sky-paris-small.jpg') no-repeat center center/cover",
+      "transition": "background 1s ease",
+    }
+  }
+>
+  <div
+    className="Current__Conditions"
+  >
+    <p>
+      <span
+        className="Current__Conditions_Temp"
+      >
+        74
+         °
+      </span>
+       
+    </p>
+    <p>
+      Clear Sky
+    </p>
+    <p
+      className="Current__Conditions_Hi_Temp"
+    >
+      <span>
+        Hi 
+        74
+         °
+      </span>
+      <span>
+        ·
+      </span>
+      <span>
+        Lo 
+        55
+         °
+      </span>
+    </p>
+  </div>
+  <img
+    alt="Weather Icon"
+    sizes="(min-width:768) 100w , 200w"
+    src="http://openweathermap.org/img/wn/01d@4x.png"
+    srcSet="http://openweathermap.org/img/wn/01d@2x.png 100w, 
+        http://openweathermap.org/img/wn/01d@4x.png 200w"
+  />
+</section>
+`;
