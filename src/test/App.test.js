@@ -18,9 +18,12 @@ describe('< App /> component', () => {
   const fetchWeather = jest.fn();
 
   it('should match snapshot', () => {
-    const wrapper = shallow(<App current={initialState.current} />);
+    const wrapper = shallow(
+      <App fetchWeather={fetchWeather} current={initialState.current} />
+    );
     expect(toJson(wrapper)).toMatchSnapshot();
     expect(wrapper.length).toBe(1);
+    wrapper.unmount();
   });
 
   it('should call fetchWeather', () => {
@@ -34,4 +37,6 @@ describe('< App /> component', () => {
     expect(fetchWeather).toHaveBeenCalledTimes(1);
     wrapper.unmount();
   });
+
+  it('should render correct background', () => {});
 });
