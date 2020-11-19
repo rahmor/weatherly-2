@@ -101,7 +101,7 @@ function fetchCoordinates(city) {
 
 function fetchWeather(coordinates = [40.7127281, -74.0060152], city) {
   const WEATHER_LOCATION_ADDRESS = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates[0]}&lon=${coordinates[1]}&
-  exclude={part}&units=imperial&appid=${WEATHER_API_KEY}`;
+  exclude={minutely,alerts}&units=imperial&appid=${WEATHER_API_KEY}`;
   return function (dispatch) {
     dispatch(updateCity(city));
     dispatch(isFetching());
