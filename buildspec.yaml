@@ -15,7 +15,7 @@ phases:
       - echo Testing...
       - npm test -- --watchAll=false
       - echo Building...
-      - npm runbuild
+      - npm run build
 artifacts:
   files:
     - '**/*'
