@@ -13,7 +13,7 @@ phases:
   build:
     commands:
       - echo Testing...
-      - npm run test --watchAll=false
+      - npm test -- --watchAll=false
       - echo Building...
       - npm runbuild
 artifacts:
