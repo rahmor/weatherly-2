@@ -9,6 +9,7 @@ export const initialState = {
   current: {
     temp: 74,
     time: '12:41:09 PM',
+    dt: 1605739065,
     hi: 74,
     lo: 55,
     icon: '01d',
@@ -310,6 +311,104 @@ export const initialState = {
   },
   active: null,
   fetched: true,
+};
+
+export const JSON = {
+  current: {
+    dt: 1605739065,
+    sunrise: 1605701583,
+    sunset: 1605738778,
+    temp: 58.5,
+    feels_like: 51.89,
+    pressure: 1031,
+    humidity: 25,
+    dew_point: 23.88,
+    uvi: 3.4,
+    clouds: 1,
+    visibility: 10000,
+    wind_speed: 3.36,
+    wind_deg: 310,
+    weather: [
+      {
+        id: 800,
+        main: 'Clear',
+        description: 'clear sky',
+        icon: '01n',
+      },
+    ],
+  },
+  daily: [
+    {
+      dt: 1604851200,
+      sunrise: 1604835818,
+      sunset: 1604872819,
+      temp: {
+        day: 74.52,
+        min: 55.87,
+        max: 74.52,
+        night: 61.5,
+        eve: 72.34,
+        morn: 56.86,
+      },
+      feels_like: {
+        day: 73.72,
+        night: 61.57,
+        eve: 72.37,
+        morn: 54.99,
+      },
+      pressure: 1028,
+      humidity: 46,
+      dew_point: 52.39,
+      wind_speed: 2.73,
+      wind_deg: 270,
+      weather: [
+        {
+          id: 800,
+          main: 'Clear',
+          description: 'clear sky',
+          icon: '01d',
+        },
+      ],
+      clouds: 1,
+      pop: 0,
+      uvi: 2.98,
+    },
+    {
+      dt: 1604937600,
+      sunrise: 1604922286,
+      sunset: 1604959164,
+      temp: {
+        day: 66.88,
+        min: 57.09,
+        max: 73.11,
+        night: 60.24,
+        eve: 71.01,
+        morn: 58.06,
+      },
+      feels_like: {
+        day: 67.14,
+        night: 57.18,
+        eve: 70.03,
+        morn: 58.51,
+      },
+      pressure: 1028,
+      humidity: 67,
+      dew_point: 55.85,
+      wind_speed: 2.64,
+      wind_deg: 197,
+      weather: [
+        {
+          id: 800,
+          main: 'Clear',
+          description: 'clear sky',
+          icon: '01d',
+        },
+      ],
+      clouds: 0,
+      pop: 0,
+      uvi: 3.12,
+    },
+  ],
 };
 
 const store = createStore(
