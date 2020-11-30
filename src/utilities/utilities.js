@@ -9,7 +9,7 @@ function parseWeatherJSON(JSON) {
     icon: JSON.current.weather[0].icon,
     condition: JSON.current.weather[0].description,
   };
-  const DAILY = JSON.daily;
+  const DAILY = JSON.daily.slice(0, 5);
   return { CURRENT, DAILY };
 }
 
