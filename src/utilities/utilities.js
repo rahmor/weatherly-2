@@ -1,12 +1,11 @@
 import lodash from 'lodash';
 
 function parseWeatherJSON(JSON) {
-  // const ICON_ADDRESS = ` http://openweathermap.org/img/wn/${JSON.current.weather[0].icon}.png`;
   let CURRENT = {
-    temp: Math.floor(JSON.current.temp),
+    temp: JSON.current.temp.toFixed(),
     time: parseUnixTime(JSON.current.dt),
-    hi: Math.floor(JSON.daily[0].temp.max),
-    lo: Math.floor(JSON.daily[0].temp.min),
+    hi: JSON.daily[0].temp.max.toFixed(),
+    lo: JSON.daily[0].temp.min.toFixed(),
     icon: JSON.current.weather[0].icon,
     condition: JSON.current.weather[0].description,
   };
@@ -15,13 +14,11 @@ function parseWeatherJSON(JSON) {
 }
 
 function getCurrentFromDaily(JSON) {
-  // const ICON_ADDRESS = ` http://openweathermap.org/img/wn/${JSON.weather[0].icon}.png`;
-
   let CURRENT = {
-    temp: Math.floor(JSON.temp.min),
+    temp: JSON.temp.max.toFixed(),
     time: parseUnixTime(JSON.dt),
-    hi: Math.floor(JSON.temp.max),
-    lo: Math.floor(JSON.temp.min),
+    hi: JSON.temp.max.toFixed(),
+    lo: JSON.temp.min.toFixed(),
     icon: JSON.weather[0].icon,
     condition: JSON.weather[0].description,
   };
