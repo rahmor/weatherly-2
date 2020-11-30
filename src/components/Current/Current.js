@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import lodash from 'lodash';
-import CONDITIONS from '../utilities/conditions';
+import CONDITIONS from '../../utilities/conditions';
 import './Current.css';
 
 const Current = ({ current, searched, updateCurrentWeather, fetched }) => {

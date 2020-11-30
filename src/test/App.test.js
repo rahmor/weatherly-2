@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
 import toJson from 'enzyme-to-json';
-import { App } from '../App/App';
+import { App } from '../components//App/App';
 import { initialState } from '../utilities/testfixtures';
 
 describe('< App /> component', () => {

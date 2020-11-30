@@ -3,7 +3,7 @@ import Daily from '../Daily/Daily';
 import Current from '../Current/Current';
 import SearchForm from '../SearchForm/SearchForm';
 import HourlyGraph from '../HourlyGraph/HourlyGraph';
-import { coordinates, city } from '../utilities/utilities';
+import { coordinates, city } from '../../utilities/utilities';
 import { connect } from 'react-redux';
 import {
   fetchWeather,
@@ -12,9 +12,9 @@ import {
   focusDaily,
   updateActive,
   updateCurrentWeather,
-} from '../actions/actions';
-import CONDITIONS from '../utilities/conditions';
-import useMediaQuery from '../hooks/useMediaQuery';
+} from '../../actions/actions';
+import CONDITIONS from '../../utilities/conditions';
+import useMediaQuery from '../../hooks/useMediaQuery';
 import './App.css';
 
 export function App(props) {

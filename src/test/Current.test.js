@@ -1,5 +1,5 @@
 import React from 'react';
-import Current, { style } from '../Current/Current';
+import Current, { style } from '../components/Current/Current';
 import { shallow, mount } from 'enzyme';
 import toJson from 'enzyme-to-json';
 import { initialState } from '../utilities/testfixtures';
