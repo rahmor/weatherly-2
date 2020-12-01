@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Day> component should match snapshot 1`] = `
+<div
+  className="Day active"
+  onClick={[Function]}
+>
+  <h3>
+    Sunday
+  </h3>
+  <p>
+    <span>
+      Hi 
+      75
+       °
+    </span>
+     
+    <span>
+      ·
+    </span>
+      
+    <span>
+      Lo 
+      56
+       °
+    </span>
+  </p>
+</div>
+`;
