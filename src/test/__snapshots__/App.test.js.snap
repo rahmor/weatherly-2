@@ -28,3 +28,1378 @@ exports[`< App /> component should match snapshot 1`] = `
   <Daily />
 </div>
 `;
+
+exports[`< App /> component tree should match snapshot 1`] = `
+<App
+  current={
+    Object {
+      "condition": "clear sky",
+      "dt": 1605739065,
+      "hi": 74,
+      "icon": "01d",
+      "lo": 55,
+      "temp": 74,
+      "time": "12:41:09 PM",
+    }
+  }
+  daily={
+    Array [
+      Object {
+        "clouds": 1,
+        "dew_point": 52.39,
+        "dt": 1604851200,
+        "feels_like": Object {
+          "day": 73.72,
+          "eve": 72.37,
+          "morn": 54.99,
+          "night": 61.57,
+        },
+        "humidity": 46,
+        "pop": 0,
+        "pressure": 1028,
+        "sunrise": 1604835818,
+        "sunset": 1604872819,
+        "temp": Object {
+          "day": 74.52,
+          "eve": 72.34,
+          "max": 74.52,
+          "min": 55.87,
+          "morn": 56.86,
+          "night": 61.5,
+        },
+        "uvi": 2.98,
+        "weather": Array [
+          Object {
+            "description": "clear sky",
+            "icon": "01d",
+            "id": 800,
+            "main": "Clear",
+          },
+        ],
+        "wind_deg": 270,
+        "wind_speed": 2.73,
+      },
+      Object {
+        "clouds": 0,
+        "dew_point": 55.85,
+        "dt": 1604937600,
+        "feels_like": Object {
+          "day": 67.14,
+          "eve": 70.03,
+          "morn": 58.51,
+          "night": 57.18,
+        },
+        "humidity": 67,
+        "pop": 0,
+        "pressure": 1028,
+        "sunrise": 1604922286,
+        "sunset": 1604959164,
+        "temp": Object {
+          "day": 66.88,
+          "eve": 71.01,
+          "max": 73.11,
+          "min": 57.09,
+          "morn": 58.06,
+          "night": 60.24,
+        },
+        "uvi": 3.12,
+        "weather": Array [
+          Object {
+            "description": "clear sky",
+            "icon": "01d",
+            "id": 800,
+            "main": "Clear",
+          },
+        ],
+        "wind_deg": 197,
+        "wind_speed": 2.64,
+      },
+      Object {
+        "clouds": 25,
+        "dew_point": 59.58,
+        "dt": 1605024000,
+        "feels_like": Object {
+          "day": 66.24,
+          "eve": 70.9,
+          "morn": 56.28,
+          "night": 65.01,
+        },
+        "humidity": 77,
+        "pop": 0,
+        "pressure": 1023,
+        "sunrise": 1605008753,
+        "sunset": 1605045510,
+        "temp": Object {
+          "day": 66.69,
+          "eve": 72.18,
+          "max": 73.29,
+          "min": 57.88,
+          "morn": 57.99,
+          "night": 65.91,
+        },
+        "uvi": 3.18,
+        "weather": Array [
+          Object {
+            "description": "scattered clouds",
+            "icon": "03d",
+            "id": 802,
+            "main": "Clouds",
+          },
+        ],
+        "wind_deg": 187,
+        "wind_speed": 6.11,
+      },
+      Object {
+        "clouds": 94,
+        "dew_point": 64.62,
+        "dt": 1605110400,
+        "feels_like": Object {
+          "day": 70.34,
+          "eve": 75.51,
+          "morn": 65.75,
+          "night": 72.66,
+        },
+        "humidity": 79,
+        "pop": 1,
+        "pressure": 1017,
+        "rain": 18.99,
+        "sunrise": 1605095221,
+        "sunset": 1605131858,
+        "temp": Object {
+          "day": 71.44,
+          "eve": 73.02,
+          "max": 74.68,
+          "min": 65.07,
+          "morn": 65.07,
+          "night": 69.66,
+        },
+        "uvi": 3.06,
+        "weather": Array [
+          Object {
+            "description": "heavy intensity rain",
+            "icon": "10d",
+            "id": 502,
+            "main": "Rain",
+          },
+        ],
+        "wind_deg": 199,
+        "wind_speed": 11.01,
+      },
+      Object {
+        "clouds": 100,
+        "dew_point": 62.8,
+        "dt": 1605196800,
+        "feels_like": Object {
+          "day": 67.59,
+          "eve": 63.1,
+          "morn": 67.84,
+          "night": 54.82,
+        },
+        "humidity": 84,
+        "pop": 1,
+        "pressure": 1013,
+        "rain": 55.47,
+        "sunrise": 1605181688,
+        "sunset": 1605218208,
+        "temp": Object {
+          "day": 67.6,
+          "eve": 65.82,
+          "max": 69.44,
+          "min": 59.16,
+          "morn": 66.15,
+          "night": 59.16,
+        },
+        "uvi": 2.87,
+        "weather": Array [
+          Object {
+            "description": "very heavy rain",
+            "icon": "10d",
+            "id": 503,
+            "main": "Rain",
+          },
+        ],
+        "wind_deg": 346,
+        "wind_speed": 7.63,
+      },
+      Object {
+        "clouds": 65,
+        "dew_point": 39.11,
+        "dt": 1605283200,
+        "feels_like": Object {
+          "day": 51.24,
+          "eve": 53.35,
+          "morn": 50.29,
+          "night": 45.32,
+        },
+        "humidity": 49,
+        "pop": 0.05,
+        "pressure": 1020,
+        "sunrise": 1605268156,
+        "sunset": 1605304559,
+        "temp": Object {
+          "day": 57.94,
+          "eve": 59.22,
+          "max": 61.21,
+          "min": 52.02,
+          "morn": 56.07,
+          "night": 52.02,
+        },
+        "uvi": 2.95,
+        "weather": Array [
+          Object {
+            "description": "broken clouds",
+            "icon": "04d",
+            "id": 803,
+            "main": "Clouds",
+          },
+        ],
+        "wind_deg": 359,
+        "wind_speed": 7.58,
+      },
+      Object {
+        "clouds": 73,
+        "dew_point": 36.77,
+        "dt": 1605369600,
+        "feels_like": Object {
+          "day": 47.39,
+          "eve": 51.55,
+          "morn": 42.01,
+          "night": 48.36,
+        },
+        "humidity": 54,
+        "pop": 1,
+        "pressure": 1027,
+        "rain": 7.01,
+        "sunrise": 1605354623,
+        "sunset": 1605390912,
+        "temp": Object {
+          "day": 52.93,
+          "eve": 56.77,
+          "max": 57.54,
+          "min": 46.72,
+          "morn": 48.25,
+          "night": 54.54,
+        },
+        "uvi": 2.88,
+        "weather": Array [
+          Object {
+            "description": "moderate rain",
+            "icon": "10d",
+            "id": 501,
+            "main": "Rain",
+          },
+        ],
+        "wind_deg": 77,
+        "wind_speed": 4.85,
+      },
+      Object {
+        "clouds": 100,
+        "dew_point": 58.78,
+        "dt": 1605456000,
+        "feels_like": Object {
+          "day": 62.78,
+          "eve": 67.44,
+          "morn": 56.16,
+          "night": 60.3,
+        },
+        "humidity": 87,
+        "pop": 1,
+        "pressure": 1013,
+        "rain": 27.04,
+        "sunrise": 1605441090,
+        "sunset": 1605477267,
+        "temp": Object {
+          "day": 62.55,
+          "eve": 66.51,
+          "max": 67.84,
+          "min": 56.44,
+          "morn": 56.97,
+          "night": 60.42,
+        },
+        "uvi": 2.43,
+        "weather": Array [
+          Object {
+            "description": "heavy intensity rain",
+            "icon": "10d",
+            "id": 502,
+            "main": "Rain",
+          },
+        ],
+        "wind_deg": 268,
+        "wind_speed": 4.5,
+      },
+    ]
+  }
+  fetchWeather={
+    [MockFunction] {
+      "calls": Array [
+        Array [
+          Array [
+            40.7127281,
+            -74.0060152,
+          ],
+          "New York",
+        ],
+        Array [
+          Array [
+            40.7127281,
+            -74.0060152,
+          ],
+          "New York",
+        ],
+      ],
+      "results": Array [
+        Object {
+          "type": "return",
+          "value": Object {
+            "New York": Array [
+              40.7127281,
+              -74.0060152,
+            ],
+          },
+        },
+        Object {
+          "type": "return",
+          "value": Object {
+            "New York": Array [
+              40.7127281,
+              -74.0060152,
+            ],
+          },
+        },
+      ],
+    }
+  }
+>
+  <div
+    className="App"
+    style={
+      Object {
+        "backgroundImage": "linear-gradient(#7753ac, #d98cb3 25%)",
+      }
+    }
+  >
+    <main>
+      <SearchForm>
+        <header
+          className="SearchForm"
+        >
+          <form
+            id="search"
+            name="search"
+            onSubmit={[Function]}
+          >
+            <label
+              className="App__Visually__Hidden"
+              htmlFor="city"
+            />
+            <FontAwesomeIcon
+              border={false}
+              className="SearchForm__LocationArrow"
+              fixedWidth={false}
+              flip={null}
+              icon={
+                Object {
+                  "icon": Array [
+                    512,
+                    512,
+                    Array [],
+                    "f124",
+                    "M444.52 3.52L28.74 195.42c-47.97 22.39-31.98 92.75 19.19 92.75h175.91v175.91c0 51.17 70.36 67.17 92.75 19.19l191.9-415.78c15.99-38.39-25.59-79.97-63.97-63.97z",
+                  ],
+                  "iconName": "location-arrow",
+                  "prefix": "fas",
+                }
+              }
+              inverse={false}
+              listItem={false}
+              mask={null}
+              pull={null}
+              pulse={false}
+              rotation={null}
+              size={null}
+              spin={false}
+              swapOpacity={false}
+              symbol={false}
+              title=""
+              transform={null}
+            >
+              <svg
+                aria-hidden="true"
+                className="svg-inline--fa fa-location-arrow fa-w-16 SearchForm__LocationArrow"
+                data-icon="location-arrow"
+                data-prefix="fas"
+                focusable="false"
+                role="img"
+                style={Object {}}
+                viewBox="0 0 512 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M444.52 3.52L28.74 195.42c-47.97 22.39-31.98 92.75 19.19 92.75h175.91v175.91c0 51.17 70.36 67.17 92.75 19.19l191.9-415.78c15.99-38.39-25.59-79.97-63.97-63.97z"
+                  fill="currentColor"
+                  style={Object {}}
+                />
+              </svg>
+            </FontAwesomeIcon>
+            <span
+              onClick={[Function]}
+            />
+            <button
+              type="submit"
+            >
+              <FontAwesomeIcon
+                border={false}
+                className="SearchForm__Search"
+                fixedWidth={false}
+                flip={null}
+                icon={
+                  Object {
+                    "icon": Array [
+                      512,
+                      512,
+                      Array [],
+                      "f002",
+                      "M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z",
+                    ],
+                    "iconName": "search",
+                    "prefix": "fas",
+                  }
+                }
+                inverse={false}
+                listItem={false}
+                mask={null}
+                pull={null}
+                pulse={false}
+                rotation={null}
+                size={null}
+                spin={false}
+                swapOpacity={false}
+                symbol={false}
+                title=""
+                transform={null}
+              >
+                <svg
+                  aria-hidden="true"
+                  className="svg-inline--fa fa-search fa-w-16 SearchForm__Search"
+                  data-icon="search"
+                  data-prefix="fas"
+                  focusable="false"
+                  role="img"
+                  style={Object {}}
+                  viewBox="0 0 512 512"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"
+                    fill="currentColor"
+                    style={Object {}}
+                  />
+                </svg>
+              </FontAwesomeIcon>
+            </button>
+          </form>
+          <p
+            className="SearchForm__Date"
+          >
+            December 31st 2019, 7:00 pm
+          </p>
+        </header>
+      </SearchForm>
+      <Current
+        current={
+          Object {
+            "condition": "clear sky",
+            "dt": 1605739065,
+            "hi": 74,
+            "icon": "01d",
+            "lo": 55,
+            "temp": 74,
+            "time": "12:41:09 PM",
+          }
+        }
+      >
+        <section
+          className="Current"
+        >
+          <div
+            className="Current__Conditions"
+          >
+            <p>
+              <span
+                className="Current__Conditions_Temp"
+              >
+                74
+                 °
+              </span>
+               
+            </p>
+            <p>
+              Clear Sky
+            </p>
+            <p
+              className="Current__Conditions_Hi_Temp"
+            >
+              <span>
+                Hi 
+                74
+                 °
+              </span>
+              <span>
+                ·
+              </span>
+              <span>
+                Lo 
+                55
+                 °
+              </span>
+            </p>
+          </div>
+          <img
+            alt="Weather Icon"
+            sizes="(min-width:768) 100w , 200w"
+            src="http://openweathermap.org/img/wn/01d@4x.png"
+            srcSet="http://openweathermap.org/img/wn/01d@2x.png 100w, 
+        http://openweathermap.org/img/wn/01d@4x.png 200w"
+          />
+        </section>
+      </Current>
+    </main>
+    <Daily
+      daily={
+        Array [
+          Object {
+            "clouds": 1,
+            "dew_point": 52.39,
+            "dt": 1604851200,
+            "feels_like": Object {
+              "day": 73.72,
+              "eve": 72.37,
+              "morn": 54.99,
+              "night": 61.57,
+            },
+            "humidity": 46,
+            "pop": 0,
+            "pressure": 1028,
+            "sunrise": 1604835818,
+            "sunset": 1604872819,
+            "temp": Object {
+              "day": 74.52,
+              "eve": 72.34,
+              "max": 74.52,
+              "min": 55.87,
+              "morn": 56.86,
+              "night": 61.5,
+            },
+            "uvi": 2.98,
+            "weather": Array [
+              Object {
+                "description": "clear sky",
+                "icon": "01d",
+                "id": 800,
+                "main": "Clear",
+              },
+            ],
+            "wind_deg": 270,
+            "wind_speed": 2.73,
+          },
+          Object {
+            "clouds": 0,
+            "dew_point": 55.85,
+            "dt": 1604937600,
+            "feels_like": Object {
+              "day": 67.14,
+              "eve": 70.03,
+              "morn": 58.51,
+              "night": 57.18,
+            },
+            "humidity": 67,
+            "pop": 0,
+            "pressure": 1028,
+            "sunrise": 1604922286,
+            "sunset": 1604959164,
+            "temp": Object {
+              "day": 66.88,
+              "eve": 71.01,
+              "max": 73.11,
+              "min": 57.09,
+              "morn": 58.06,
+              "night": 60.24,
+            },
+            "uvi": 3.12,
+            "weather": Array [
+              Object {
+                "description": "clear sky",
+                "icon": "01d",
+                "id": 800,
+                "main": "Clear",
+              },
+            ],
+            "wind_deg": 197,
+            "wind_speed": 2.64,
+          },
+          Object {
+            "clouds": 25,
+            "dew_point": 59.58,
+            "dt": 1605024000,
+            "feels_like": Object {
+              "day": 66.24,
+              "eve": 70.9,
+              "morn": 56.28,
+              "night": 65.01,
+            },
+            "humidity": 77,
+            "pop": 0,
+            "pressure": 1023,
+            "sunrise": 1605008753,
+            "sunset": 1605045510,
+            "temp": Object {
+              "day": 66.69,
+              "eve": 72.18,
+              "max": 73.29,
+              "min": 57.88,
+              "morn": 57.99,
+              "night": 65.91,
+            },
+            "uvi": 3.18,
+            "weather": Array [
+              Object {
+                "description": "scattered clouds",
+                "icon": "03d",
+                "id": 802,
+                "main": "Clouds",
+              },
+            ],
+            "wind_deg": 187,
+            "wind_speed": 6.11,
+          },
+          Object {
+            "clouds": 94,
+            "dew_point": 64.62,
+            "dt": 1605110400,
+            "feels_like": Object {
+              "day": 70.34,
+              "eve": 75.51,
+              "morn": 65.75,
+              "night": 72.66,
+            },
+            "humidity": 79,
+            "pop": 1,
+            "pressure": 1017,
+            "rain": 18.99,
+            "sunrise": 1605095221,
+            "sunset": 1605131858,
+            "temp": Object {
+              "day": 71.44,
+              "eve": 73.02,
+              "max": 74.68,
+              "min": 65.07,
+              "morn": 65.07,
+              "night": 69.66,
+            },
+            "uvi": 3.06,
+            "weather": Array [
+              Object {
+                "description": "heavy intensity rain",
+                "icon": "10d",
+                "id": 502,
+                "main": "Rain",
+              },
+            ],
+            "wind_deg": 199,
+            "wind_speed": 11.01,
+          },
+          Object {
+            "clouds": 100,
+            "dew_point": 62.8,
+            "dt": 1605196800,
+            "feels_like": Object {
+              "day": 67.59,
+              "eve": 63.1,
+              "morn": 67.84,
+              "night": 54.82,
+            },
+            "humidity": 84,
+            "pop": 1,
+            "pressure": 1013,
+            "rain": 55.47,
+            "sunrise": 1605181688,
+            "sunset": 1605218208,
+            "temp": Object {
+              "day": 67.6,
+              "eve": 65.82,
+              "max": 69.44,
+              "min": 59.16,
+              "morn": 66.15,
+              "night": 59.16,
+            },
+            "uvi": 2.87,
+            "weather": Array [
+              Object {
+                "description": "very heavy rain",
+                "icon": "10d",
+                "id": 503,
+                "main": "Rain",
+              },
+            ],
+            "wind_deg": 346,
+            "wind_speed": 7.63,
+          },
+          Object {
+            "clouds": 65,
+            "dew_point": 39.11,
+            "dt": 1605283200,
+            "feels_like": Object {
+              "day": 51.24,
+              "eve": 53.35,
+              "morn": 50.29,
+              "night": 45.32,
+            },
+            "humidity": 49,
+            "pop": 0.05,
+            "pressure": 1020,
+            "sunrise": 1605268156,
+            "sunset": 1605304559,
+            "temp": Object {
+              "day": 57.94,
+              "eve": 59.22,
+              "max": 61.21,
+              "min": 52.02,
+              "morn": 56.07,
+              "night": 52.02,
+            },
+            "uvi": 2.95,
+            "weather": Array [
+              Object {
+                "description": "broken clouds",
+                "icon": "04d",
+                "id": 803,
+                "main": "Clouds",
+              },
+            ],
+            "wind_deg": 359,
+            "wind_speed": 7.58,
+          },
+          Object {
+            "clouds": 73,
+            "dew_point": 36.77,
+            "dt": 1605369600,
+            "feels_like": Object {
+              "day": 47.39,
+              "eve": 51.55,
+              "morn": 42.01,
+              "night": 48.36,
+            },
+            "humidity": 54,
+            "pop": 1,
+            "pressure": 1027,
+            "rain": 7.01,
+            "sunrise": 1605354623,
+            "sunset": 1605390912,
+            "temp": Object {
+              "day": 52.93,
+              "eve": 56.77,
+              "max": 57.54,
+              "min": 46.72,
+              "morn": 48.25,
+              "night": 54.54,
+            },
+            "uvi": 2.88,
+            "weather": Array [
+              Object {
+                "description": "moderate rain",
+                "icon": "10d",
+                "id": 501,
+                "main": "Rain",
+              },
+            ],
+            "wind_deg": 77,
+            "wind_speed": 4.85,
+          },
+          Object {
+            "clouds": 100,
+            "dew_point": 58.78,
+            "dt": 1605456000,
+            "feels_like": Object {
+              "day": 62.78,
+              "eve": 67.44,
+              "morn": 56.16,
+              "night": 60.3,
+            },
+            "humidity": 87,
+            "pop": 1,
+            "pressure": 1013,
+            "rain": 27.04,
+            "sunrise": 1605441090,
+            "sunset": 1605477267,
+            "temp": Object {
+              "day": 62.55,
+              "eve": 66.51,
+              "max": 67.84,
+              "min": 56.44,
+              "morn": 56.97,
+              "night": 60.42,
+            },
+            "uvi": 2.43,
+            "weather": Array [
+              Object {
+                "description": "heavy intensity rain",
+                "icon": "10d",
+                "id": 502,
+                "main": "Rain",
+              },
+            ],
+            "wind_deg": 268,
+            "wind_speed": 4.5,
+          },
+        ]
+      }
+    >
+      <section
+        className="Daily"
+      >
+        <Day
+          daily={
+            Object {
+              "clouds": 1,
+              "dew_point": 52.39,
+              "dt": 1604851200,
+              "feels_like": Object {
+                "day": 73.72,
+                "eve": 72.37,
+                "morn": 54.99,
+                "night": 61.57,
+              },
+              "humidity": 46,
+              "pop": 0,
+              "pressure": 1028,
+              "sunrise": 1604835818,
+              "sunset": 1604872819,
+              "temp": Object {
+                "day": 74.52,
+                "eve": 72.34,
+                "max": 74.52,
+                "min": 55.87,
+                "morn": 56.86,
+                "night": 61.5,
+              },
+              "uvi": 2.98,
+              "weather": Array [
+                Object {
+                  "description": "clear sky",
+                  "icon": "01d",
+                  "id": 800,
+                  "main": "Clear",
+                },
+              ],
+              "wind_deg": 270,
+              "wind_speed": 2.73,
+            }
+          }
+          i={0}
+          key="0"
+        >
+          <div
+            className="Day null"
+            onClick={[Function]}
+          >
+            <h3>
+              Sunday
+            </h3>
+            <p>
+              <span>
+                Hi 
+                75
+                 °
+              </span>
+               
+              <span>
+                ·
+              </span>
+                
+              <span>
+                Lo 
+                56
+                 °
+              </span>
+            </p>
+          </div>
+        </Day>
+        <Day
+          daily={
+            Object {
+              "clouds": 0,
+              "dew_point": 55.85,
+              "dt": 1604937600,
+              "feels_like": Object {
+                "day": 67.14,
+                "eve": 70.03,
+                "morn": 58.51,
+                "night": 57.18,
+              },
+              "humidity": 67,
+              "pop": 0,
+              "pressure": 1028,
+              "sunrise": 1604922286,
+              "sunset": 1604959164,
+              "temp": Object {
+                "day": 66.88,
+                "eve": 71.01,
+                "max": 73.11,
+                "min": 57.09,
+                "morn": 58.06,
+                "night": 60.24,
+              },
+              "uvi": 3.12,
+              "weather": Array [
+                Object {
+                  "description": "clear sky",
+                  "icon": "01d",
+                  "id": 800,
+                  "main": "Clear",
+                },
+              ],
+              "wind_deg": 197,
+              "wind_speed": 2.64,
+            }
+          }
+          i={1}
+          key="1"
+        >
+          <div
+            className="Day null"
+            onClick={[Function]}
+          >
+            <h3>
+              Monday
+            </h3>
+            <p>
+              <span>
+                Hi 
+                73
+                 °
+              </span>
+               
+              <span>
+                ·
+              </span>
+                
+              <span>
+                Lo 
+                57
+                 °
+              </span>
+            </p>
+          </div>
+        </Day>
+        <Day
+          daily={
+            Object {
+              "clouds": 25,
+              "dew_point": 59.58,
+              "dt": 1605024000,
+              "feels_like": Object {
+                "day": 66.24,
+                "eve": 70.9,
+                "morn": 56.28,
+                "night": 65.01,
+              },
+              "humidity": 77,
+              "pop": 0,
+              "pressure": 1023,
+              "sunrise": 1605008753,
+              "sunset": 1605045510,
+              "temp": Object {
+                "day": 66.69,
+                "eve": 72.18,
+                "max": 73.29,
+                "min": 57.88,
+                "morn": 57.99,
+                "night": 65.91,
+              },
+              "uvi": 3.18,
+              "weather": Array [
+                Object {
+                  "description": "scattered clouds",
+                  "icon": "03d",
+                  "id": 802,
+                  "main": "Clouds",
+                },
+              ],
+              "wind_deg": 187,
+              "wind_speed": 6.11,
+            }
+          }
+          i={2}
+          key="2"
+        >
+          <div
+            className="Day null"
+            onClick={[Function]}
+          >
+            <h3>
+              Tuesday
+            </h3>
+            <p>
+              <span>
+                Hi 
+                73
+                 °
+              </span>
+               
+              <span>
+                ·
+              </span>
+                
+              <span>
+                Lo 
+                58
+                 °
+              </span>
+            </p>
+          </div>
+        </Day>
+        <Day
+          daily={
+            Object {
+              "clouds": 94,
+              "dew_point": 64.62,
+              "dt": 1605110400,
+              "feels_like": Object {
+                "day": 70.34,
+                "eve": 75.51,
+                "morn": 65.75,
+                "night": 72.66,
+              },
+              "humidity": 79,
+              "pop": 1,
+              "pressure": 1017,
+              "rain": 18.99,
+              "sunrise": 1605095221,
+              "sunset": 1605131858,
+              "temp": Object {
+                "day": 71.44,
+                "eve": 73.02,
+                "max": 74.68,
+                "min": 65.07,
+                "morn": 65.07,
+                "night": 69.66,
+              },
+              "uvi": 3.06,
+              "weather": Array [
+                Object {
+                  "description": "heavy intensity rain",
+                  "icon": "10d",
+                  "id": 502,
+                  "main": "Rain",
+                },
+              ],
+              "wind_deg": 199,
+              "wind_speed": 11.01,
+            }
+          }
+          i={3}
+          key="3"
+        >
+          <div
+            className="Day null"
+            onClick={[Function]}
+          >
+            <h3>
+              Wednesday
+            </h3>
+            <p>
+              <span>
+                Hi 
+                75
+                 °
+              </span>
+               
+              <span>
+                ·
+              </span>
+                
+              <span>
+                Lo 
+                65
+                 °
+              </span>
+            </p>
+          </div>
+        </Day>
+        <Day
+          daily={
+            Object {
+              "clouds": 100,
+              "dew_point": 62.8,
+              "dt": 1605196800,
+              "feels_like": Object {
+                "day": 67.59,
+                "eve": 63.1,
+                "morn": 67.84,
+                "night": 54.82,
+              },
+              "humidity": 84,
+              "pop": 1,
+              "pressure": 1013,
+              "rain": 55.47,
+              "sunrise": 1605181688,
+              "sunset": 1605218208,
+              "temp": Object {
+                "day": 67.6,
+                "eve": 65.82,
+                "max": 69.44,
+                "min": 59.16,
+                "morn": 66.15,
+                "night": 59.16,
+              },
+              "uvi": 2.87,
+              "weather": Array [
+                Object {
+                  "description": "very heavy rain",
+                  "icon": "10d",
+                  "id": 503,
+                  "main": "Rain",
+                },
+              ],
+              "wind_deg": 346,
+              "wind_speed": 7.63,
+            }
+          }
+          i={4}
+          key="4"
+        >
+          <div
+            className="Day null"
+            onClick={[Function]}
+          >
+            <h3>
+              Thursday
+            </h3>
+            <p>
+              <span>
+                Hi 
+                69
+                 °
+              </span>
+               
+              <span>
+                ·
+              </span>
+                
+              <span>
+                Lo 
+                59
+                 °
+              </span>
+            </p>
+          </div>
+        </Day>
+        <Day
+          daily={
+            Object {
+              "clouds": 65,
+              "dew_point": 39.11,
+              "dt": 1605283200,
+              "feels_like": Object {
+                "day": 51.24,
+                "eve": 53.35,
+                "morn": 50.29,
+                "night": 45.32,
+              },
+              "humidity": 49,
+              "pop": 0.05,
+              "pressure": 1020,
+              "sunrise": 1605268156,
+              "sunset": 1605304559,
+              "temp": Object {
+                "day": 57.94,
+                "eve": 59.22,
+                "max": 61.21,
+                "min": 52.02,
+                "morn": 56.07,
+                "night": 52.02,
+              },
+              "uvi": 2.95,
+              "weather": Array [
+                Object {
+                  "description": "broken clouds",
+                  "icon": "04d",
+                  "id": 803,
+                  "main": "Clouds",
+                },
+              ],
+              "wind_deg": 359,
+              "wind_speed": 7.58,
+            }
+          }
+          i={5}
+          key="5"
+        >
+          <div
+            className="Day null"
+            onClick={[Function]}
+          >
+            <h3>
+              Friday
+            </h3>
+            <p>
+              <span>
+                Hi 
+                61
+                 °
+              </span>
+               
+              <span>
+                ·
+              </span>
+                
+              <span>
+                Lo 
+                52
+                 °
+              </span>
+            </p>
+          </div>
+        </Day>
+        <Day
+          daily={
+            Object {
+              "clouds": 73,
+              "dew_point": 36.77,
+              "dt": 1605369600,
+              "feels_like": Object {
+                "day": 47.39,
+                "eve": 51.55,
+                "morn": 42.01,
+                "night": 48.36,
+              },
+              "humidity": 54,
+              "pop": 1,
+              "pressure": 1027,
+              "rain": 7.01,
+              "sunrise": 1605354623,
+              "sunset": 1605390912,
+              "temp": Object {
+                "day": 52.93,
+                "eve": 56.77,
+                "max": 57.54,
+                "min": 46.72,
+                "morn": 48.25,
+                "night": 54.54,
+              },
+              "uvi": 2.88,
+              "weather": Array [
+                Object {
+                  "description": "moderate rain",
+                  "icon": "10d",
+                  "id": 501,
+                  "main": "Rain",
+                },
+              ],
+              "wind_deg": 77,
+              "wind_speed": 4.85,
+            }
+          }
+          i={6}
+          key="6"
+        >
+          <div
+            className="Day null"
+            onClick={[Function]}
+          >
+            <h3>
+              Saturday
+            </h3>
+            <p>
+              <span>
+                Hi 
+                58
+                 °
+              </span>
+               
+              <span>
+                ·
+              </span>
+                
+              <span>
+                Lo 
+                47
+                 °
+              </span>
+            </p>
+          </div>
+        </Day>
+        <Day
+          daily={
+            Object {
+              "clouds": 100,
+              "dew_point": 58.78,
+              "dt": 1605456000,
+              "feels_like": Object {
+                "day": 62.78,
+                "eve": 67.44,
+                "morn": 56.16,
+                "night": 60.3,
+              },
+              "humidity": 87,
+              "pop": 1,
+              "pressure": 1013,
+              "rain": 27.04,
+              "sunrise": 1605441090,
+              "sunset": 1605477267,
+              "temp": Object {
+                "day": 62.55,
+                "eve": 66.51,
+                "max": 67.84,
+                "min": 56.44,
+                "morn": 56.97,
+                "night": 60.42,
+              },
+              "uvi": 2.43,
+              "weather": Array [
+                Object {
+                  "description": "heavy intensity rain",
+                  "icon": "10d",
+                  "id": 502,
+                  "main": "Rain",
+                },
+              ],
+              "wind_deg": 268,
+              "wind_speed": 4.5,
+            }
+          }
+          i={7}
+          key="7"
+        >
+          <div
+            className="Day null"
+            onClick={[Function]}
+          >
+            <h3>
+              Sunday
+            </h3>
+            <p>
+              <span>
+                Hi 
+                68
+                 °
+              </span>
+               
+              <span>
+                ·
+              </span>
+                
+              <span>
+                Lo 
+                56
+                 °
+              </span>
+            </p>
+          </div>
+        </Day>
+      </section>
+    </Daily>
+  </div>
+</App>
+`;
