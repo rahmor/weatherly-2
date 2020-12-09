@@ -21,8 +21,8 @@ jest.mock('../utilities/utilities', () => {
 });
 
 describe('Actions', () => {
-  test.skip('fetchWeather ', () => {
-    fetchMock.mock('*', {
+  test('fetchWeather ', () => {
+    fetchMock.mock('begin:https://api.openweathermap.org', {
       body: JSON.stringify({ data: 'dummy data' }),
       headers: { 'Content-Type': 'application/json' },
     });
@@ -56,8 +56,10 @@ describe('Actions', () => {
   });
 
   test('fetchCoordinates', () => {
+    store.clearActions();
     const data = { results: [{ geometry: 'dummy data' }] };
-    fetchMock.mock('*', {
+    fetchMock.resetHistory();
+    fetchMock.mock('begin:https://api.opencagedata.com', {
       body: JSON.stringify(data),
       headers: { 'Content-Type': 'application/json' },
     });
