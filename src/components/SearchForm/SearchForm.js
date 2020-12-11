@@ -1,62 +1,80 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import moment from 'moment';
+import { connect } from 'react-redux';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch, faLocationArrow } from '@fortawesome/free-solid-svg-icons';
+import { Field, reduxForm, formValueSelector } from 'redux-form';
 import './SearchForm.css';
 
-let SearchForm = (props) => {
+export let SearchFormFields = (props) => {
   let [inputting, setInputting] = useState(false);
-  let [city, setCity] = useState('');
 
   return (
-    <header className='SearchForm'>
-      <form
-        id='search'
-        name='search'
-        onSubmit={(e) => {
-          e.preventDefault();
-          setInputting((prevState) => !prevState);
-          props.fetchCoordinates(city);
-        }}
+    <form
+      id='search'
+      name='search'
+      onSubmit={(e) => {
+        e.preventDefault();
+        setInputting((prevState) => !prevState);
+        props.fetchCoordinates(props.citySearch);
+      }}
+    >
+      <label className='App__Visually__Hidden' htmlFor='city'></label>
+      <FontAwesomeIcon
+        className='SearchForm__LocationArrow'
+        icon={faLocationArrow}
       >
-        <label className='App__Visually__Hidden' htmlFor='city'></label>
-        <FontAwesomeIcon
-          className='SearchForm__LocationArrow'
-          icon={faLocationArrow}
+        Search by City
+      </FontAwesomeIcon>
+      {inputting ? (
+        <Field
+          name='citySearch'
+          component='input'
+          type='text'
+          placeholder={props.city}
+        ></Field>
+      ) : (
+        <span
+          onClick={() => {
+            setInputting((prevState) => !prevState);
+          }}
         >
-          Search by City
-        </FontAwesomeIcon>
-        {inputting ? (
-          <input
-            name='city'
-            type='search'
-            placeholder={props.city}
-            onChange={(e) => {
-              setCity(e.target.value);
-            }}
-          ></input>
-        ) : (
-          <span
-            onClick={() => {
-              setInputting((prevState) => !prevState);
-            }}
-          >
-            {props.city}
-          </span>
-        )}
+          {props.city}
+        </span>
+      )}
 
-        <button type='submit'>
-          <FontAwesomeIcon
-            className='SearchForm__Search'
-            icon={faSearch}
-          ></FontAwesomeIcon>
-        </button>
-      </form>
+      <button type='submit'>
+        <FontAwesomeIcon
+          className='SearchForm__Search'
+          icon={faSearch}
+        ></FontAwesomeIcon>
+      </button>
+    </form>
+  );
+};
+
+SearchFormFields = reduxForm({
+  form: 'search',
+})(SearchFormFields);
+
+const SearchForm = (props) => {
+  return (
+    <header className='SearchForm'>
+      <SearchFormFields {...props} />
       <p className='SearchForm__Date'>
         {moment().format('MMMM Do YYYY, h:mm a')}
       </p>
     </header>
   );
 };
+
+const selector = formValueSelector('search');
+
+SearchFormFields = connect((state) => {
+  const citySearch = selector(state, 'citySearch');
+  return {
+    citySearch,
+  };
+})(SearchFormFields);
 
 export default SearchForm;
