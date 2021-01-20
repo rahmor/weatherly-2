@@ -7,7 +7,7 @@ const mockStore = configureMockStore(middlewares);
 const store = mockStore();
 
 jest.mock('../utilities/utilities', () => {
-  const utilities = jest.requireActual('../utilities/utilities');
+  jest.requireActual('../utilities/utilities');
   return {
     parseWeatherJSON: jest.fn(() => {
       return {
@@ -15,6 +15,7 @@ jest.mock('../utilities/utilities', () => {
           sample: 'yes',
         },
         DAILY: { sample: 'yes' },
+        HOURLY: { sample: 'yes' },
       };
     }),
   };
@@ -43,7 +44,10 @@ describe('Actions', () => {
         type: 'UPDATE DAILY',
         payload: { sample: 'yes' },
       },
-
+      {
+        type: 'UPDATE HOURLY',
+        payload: { sample: 'yes' },
+      },
       { type: 'DONE FETCHING' },
     ];
 

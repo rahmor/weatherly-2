@@ -10,7 +10,11 @@ function parseWeatherJSON(JSON) {
     condition: JSON.current.weather[0].description,
   };
   const DAILY = JSON.daily.slice(0, 5);
-  return { CURRENT, DAILY };
+  const HOURLY = {
+    hours: JSON.hourly.slice(1, 12),
+    timezone: JSON.timezone_offset,
+  };
+  return { CURRENT, DAILY, HOURLY };
 }
 
 function getCurrentFromDaily(JSON) {

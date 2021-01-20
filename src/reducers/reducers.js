@@ -43,6 +43,15 @@ function updateDailyWeather(state = [], action) {
   }
 }
 
+function updateHourlyWeather(state = {}, action) {
+  switch (action.type) {
+    case 'UPDATE HOURLY':
+      return action.payload;
+    default:
+      return state;
+  }
+}
+
 function isActive(state = null, action) {
   switch (action.type) {
     case 'UPDATE ACTIVE':
@@ -76,6 +85,7 @@ const reducers = {
   fetching: updateFetching,
   current: updateCurrentWeather,
   daily: updateDailyWeather,
+  hourly: updateHourlyWeather,
   searched: searchedCurrentWeather,
   active: isActive,
   fetched: doneFetching,

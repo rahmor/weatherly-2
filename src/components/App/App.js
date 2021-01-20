@@ -40,7 +40,7 @@ export function App(props) {
           updateCurrentWeather={props.updateCurrentWeather}
           fetched={props.fetched}
         />
-        {/* <HourlyGraph {...props} /> */}
+        <HourlyGraph hourly={props.hourly} fetched={props.fetched} />
       </main>
       <Daily
         focusDaily={props.focusDaily}
