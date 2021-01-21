@@ -301,6 +301,39 @@ export const initialState = {
       uvi: 2.43,
     },
   ],
+  hourly: {
+    hours: [
+      {
+        dt: 1610928000,
+        temp: 65.68,
+        feels_like: 61.99,
+        pressure: 1018,
+        humidity: 50,
+      },
+      {
+        dt: 1610931600,
+        temp: 66.25,
+        feels_like: 61.79,
+        pressure: 1019,
+        humidity: 51,
+      },
+      {
+        dt: 1610935200,
+        temp: 66.18,
+        feels_like: 62.02,
+        pressure: 1019,
+        humidity: 53,
+      },
+      {
+        dt: 1610938800,
+        temp: 65.93,
+        feels_like: 62.69,
+        pressure: 1019,
+        humidity: 53,
+      },
+    ],
+    timezone: -18000,
+  },
   searched: {
     temp: 74,
     time: '12:41:09 PM',
@@ -314,6 +347,7 @@ export const initialState = {
 };
 
 export const JSON = {
+  timezone_offset: -18000,
   current: {
     dt: 1605739065,
     sunrise: 1605701583,
@@ -407,6 +441,74 @@ export const JSON = {
       clouds: 0,
       pop: 0,
       uvi: 3.12,
+    },
+  ],
+  hourly: [
+    {
+      dt: 1610157600,
+      temp: 36.36,
+      feels_like: 25.66,
+      pressure: 1017,
+      humidity: 81,
+      dew_point: 31.21,
+      uvi: 0,
+      clouds: 90,
+      visibility: 10000,
+      wind_speed: 12.41,
+      wind_deg: 324,
+      weather: [
+        {
+          id: 804,
+          main: 'Clouds',
+          description: 'overcast clouds',
+          icon: '04n',
+        },
+      ],
+      pop: 0,
+    },
+    {
+      dt: 1610161200,
+      temp: 36.45,
+      feels_like: 26.2,
+      pressure: 1017,
+      humidity: 81,
+      dew_point: 31.28,
+      uvi: 0,
+      clouds: 82,
+      visibility: 10000,
+      wind_speed: 11.63,
+      wind_deg: 320,
+      weather: [
+        {
+          id: 803,
+          main: 'Clouds',
+          description: 'broken clouds',
+          icon: '04n',
+        },
+      ],
+      pop: 0,
+    },
+    {
+      dt: 1610164800,
+      temp: 35.82,
+      feels_like: 25.77,
+      pressure: 1018,
+      humidity: 84,
+      dew_point: 31.53,
+      uvi: 0,
+      clouds: 70,
+      visibility: 10000,
+      wind_speed: 11.34,
+      wind_deg: 313,
+      weather: [
+        {
+          id: 803,
+          main: 'Clouds',
+          description: 'broken clouds',
+          icon: '04n',
+        },
+      ],
+      pop: 0,
     },
   ],
 };

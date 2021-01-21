@@ -1,10 +1,10 @@
 import { parseWeatherJSON, getCurrentFromDaily } from '../utilities/utilities';
-import { change } from 'redux-form';
 const ADD_CURRENT = 'ADD CURRENT';
 const UPDATE_CITY = 'UPDATE CITY';
 const UPDATE_FETCHING = 'UPDATE FETCHING';
 const UPDATE_CURRENT = 'UPDATE CURRENT';
 const UPDATE_DAILY = 'UPDATE DAILY';
+const UPDATE_HOURLY = 'UPDATE HOURLY';
 const FETCH_ERROR = 'FETCH ERROR';
 const UPDATE_ACTIVE = 'UPDATE ACTIVE';
 const DONE_FETCHING = 'DONE FETCHING';
@@ -65,12 +65,21 @@ function updateDailyWeather(daily) {
   };
 }
 
+function updateHourlyWeather(hourly) {
+  return {
+    type: UPDATE_HOURLY,
+    payload: hourly,
+  };
+}
+
 function fetchError() {
   return {
     type: FETCH_ERROR,
   };
 }
 
+/* HACK import data.json and bypass fetch, parse data,
+and dispatch updates to store */
 function fetchCoordinates(city) {
   city.trim();
   const COORIDINATES_URL = `https://api.opencagedata.com/geocode/v1/json?q=${city}&key=${COORDINATES_API_KEY}`;
@@ -101,7 +110,7 @@ function fetchCoordinates(city) {
 
 function fetchWeather(coordinates = [40.7127281, -74.0060152], city) {
   const WEATHER_LOCATION_ADDRESS = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates[0]}&lon=${coordinates[1]}&
-  exclude={minutely,alerts}&units=imperial&appid=${WEATHER_API_KEY}`;
+  exclude=minutely,alerts&units=imperial&appid=${WEATHER_API_KEY}`;
   return function (dispatch) {
     dispatch(updateCity(city));
     dispatch(isFetching());
@@ -115,10 +124,11 @@ function fetchWeather(coordinates = [40.7127281, -74.0060152], city) {
       })
       .then((data) => {
         dispatch(isFetching());
-        const { CURRENT, DAILY } = parseWeatherJSON(data);
+        const { CURRENT, DAILY, HOURLY } = parseWeatherJSON(data);
         dispatch(searchedCurrentWeather(CURRENT));
         dispatch(updateCurrentWeather(CURRENT));
         dispatch(updateDailyWeather(DAILY));
+        dispatch(updateHourlyWeather(HOURLY));
         dispatch(doneFetching());
         return Promise.resolve(data);
       })

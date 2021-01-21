@@ -1,38 +1,61 @@
-import SearchForm from '../components/SearchForm/SearchForm';
+import SearchForm, {
+  SearchFormFields,
+} from '../components/SearchForm/SearchForm';
 import React from 'react';
-import moment from 'moment';
-import { shallow } from 'enzyme';
+import { shallow, mount } from 'enzyme';
 import toJson from 'enzyme-to-json';
-import { after } from 'lodash';
+import configureMockStore from 'redux-mock-store';
+import { combineReducers } from 'redux';
+import MyProvider from '../utilities/testutilities';
+import { initialState } from '../utilities/testfixtures';
+import reducers from '../reducers/reducers';
+import { reducer as formReducer } from 'redux-form';
+import { reduxForm } from 'redux-form';
+
+const mockStore = configureMockStore();
+const store = mockStore(initialState);
+store.replaceReducer(combineReducers({ ...reducers, form: formReducer }));
+
 jest.mock('moment', () => {
   return () => jest.requireActual('moment')('2020-01-01T00:00:00.000Z');
 });
 
 describe('SearchForm component', () => {
   const props = { fetchCoordinates: jest.fn(), city: 'New York' };
-  const wrapper = shallow(<SearchForm {...props} />);
-
-  afterAll(() => {
-    wrapper.unmount();
-    wrapper.debug();
-  });
 
   it('should match snapshot', () => {
+    const wrapper = shallow(<SearchForm />);
     expect(toJson(wrapper)).toMatchSnapshot();
+    wrapper.unmount();
   });
 
-  describe('when span clicked', () => {
-    it('should match snapshot and show input element', () => {
-      wrapper.find('span').simulate('click');
-      expect(toJson(wrapper)).toMatchSnapshot();
+  describe('when mounted', () => {
+    const Decorated = reduxForm({
+      form: 'search',
+    })(SearchFormFields);
+
+    const wrapper = mount(
+      <MyProvider>
+        <Decorated {...props} />
+      </MyProvider>
+    );
+
+    afterAll(() => {
+      wrapper.unmount();
     });
-  });
 
-  it('should call renderProps', () => {
-    wrapper
-      .find('form')
-      .at(0)
-      .simulate('submit', { preventDefault: jest.fn() });
-    expect(props.fetchCoordinates).toHaveBeenCalled();
+    it('node should contain <Field /> element when span clicked', () => {
+      wrapper.find('span').simulate('click');
+      const searchField = wrapper.find('Field');
+      expect(searchField).toBeTruthy();
+    });
+
+    it('should call renderProps', () => {
+      wrapper
+        .find('form')
+        .at(0)
+        .simulate('submit', { preventDefault: jest.fn() });
+      expect(props.fetchCoordinates).toHaveBeenCalled();
+    });
   });
 });

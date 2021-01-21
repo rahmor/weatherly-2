@@ -9,5 +9,4 @@ export default function MyProvider(props) {
 
 MyProvider.propTypes = {
   children: PropTypes.node,
-  customStore: PropTypes.shape({}),
 };

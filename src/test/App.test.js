@@ -6,7 +6,18 @@ import { initialState } from '../utilities/testfixtures';
 import MyProvider from '../utilities/testutilities';
 
 jest.mock('moment', () => {
-  return () => jest.requireActual('moment')('2020-01-01T00:00:00.000Z');
+  const mMoment = {
+    format: jest.fn(() => '2020-01-01T00:00:00.000Z'),
+  };
+  const fn = jest.fn((newMoment) => {
+    return mMoment;
+  });
+  fn.utc = jest.fn(() => {
+    return {
+      format: jest.fn(() => '2020-01-01T00:00:00.000Z'),
+    };
+  });
+  return fn;
 });
 
 jest.mock('../utilities/utilities', () => {
@@ -45,21 +56,9 @@ describe('< App /> component', () => {
     wrapper.unmount();
   });
 
-  it('should call fetchWeather', () => {
-    const wrapper = mount(
-      <ComponentApp
-        current={initialState.current}
-        daily={initialState.daily}
-        fetchWeather={fetchWeather}
-      />
-    );
-    expect(fetchWeather).toHaveBeenCalledTimes(1);
-    wrapper.unmount();
-  });
-
   describe('tree', () => {
     it('should match snapshot', () => {
-      const wrapper = mount(
+      const wrapper = shallow(
         <ComponentApp
           current={initialState.current}
           daily={initialState.daily}
