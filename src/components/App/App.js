@@ -29,25 +29,31 @@ export function App(props) {
       className='App'
       style={style.background(props.fetched, matches, props.current.icon)}
     >
-      <main>
-        <SearchForm
-          city={props.city}
-          fetchCoordinates={props.fetchCoordinates}
+      <div
+        className='container'
+        style={style.container(props.fetched, matches, props.current.icon)}
+      >
+        <main>
+          <SearchForm
+            city={props.city}
+            fetchCoordinates={props.fetchCoordinates}
+          />
+          <Current
+            current={props.current}
+            searched={props.searched}
+            updateCurrentWeather={props.updateCurrentWeather}
+            fetched={props.fetched}
+            matches={matches}
+          />
+          <HourlyGraph hourly={props.hourly} fetched={props.fetched} />
+        </main>
+        <Daily
+          focusDaily={props.focusDaily}
+          daily={props.daily}
+          updateActive={props.updateActive}
+          active={props.active}
         />
-        <Current
-          current={props.current}
-          searched={props.searched}
-          updateCurrentWeather={props.updateCurrentWeather}
-          fetched={props.fetched}
-        />
-        <HourlyGraph hourly={props.hourly} fetched={props.fetched} />
-      </main>
-      <Daily
-        focusDaily={props.focusDaily}
-        daily={props.daily}
-        updateActive={props.updateActive}
-        active={props.active}
-      />
+      </div>
     </div>
   );
 }
@@ -61,11 +67,19 @@ const style = {
       };
     } else if (fetched) {
       return {
-        backgroundColor: `${CONDITIONS[icon].color}`,
+        backgroundColor: `${CONDITIONS[icon].solid}`,
       };
     } else {
       return {
         backgroundImage: 'linear-gradient(#7753ac, #d98cb3 25%)',
+      };
+    }
+  },
+  container: (fetched, matches, icon) => {
+    if (fetched && matches) {
+      return {
+        backgroundColor: `${CONDITIONS[icon].color}`,
+        backdropFilter: `blur(5px)`,
       };
     }
   },

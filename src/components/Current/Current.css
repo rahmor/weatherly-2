@@ -3,7 +3,6 @@
   background-position: center center;
   background-size: cover;
   color: white;
-  padding: 1rem;
   display: flex;
   justify-content: space-between;
   line-height: 1.5;
@@ -33,17 +32,6 @@
   margin-right: 0.25rem;
 }
 
-/* .Current:before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  box-shadow: inset 0 0 2000px #7753ac;
-  filter: blur(10px);
-} */
-
 @media only screen and (min-width: 768px) {
   .Current {
     order: 0;
@@ -52,6 +40,13 @@
     box-shadow: none;
   }
 
+  .Current__Conditions {
+    text-align: center;
+  }
+
+  .Current__Conditions__Container {
+    border-radius: 0px 8px 0px 0px;
+  }
   .Current img {
     max-width: 200px;
     max-height: 200px;
