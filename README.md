@@ -1,22 +1,31 @@
-# WEATHERLY 
+# WEATHERLY
+
 This app uses a [Vercel](https://vercel.com/) integration.  
 Find it live at [Weatherly](https://weatherly-2.vercel.app/)
 
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).  
+This app design was inspired by ![The inspiration](./src/assets/weatherly.jpg) and ![The inspiration](./src/assets/IMG_0285.PNG)
 
 ## Running Weatherly:
 
 ### You will need to.
+
 1. Clone the project.
+
 - https - `git clone https://github.com/rahmor/weatherly-2.git`
 - ssh - `git@github.com:rahmor/weatherly-2.git`
 
 2. Install the dependencies.
+
 - `npm install`
+
 3. Get an api key from [Open Weather](https://openweathermap.org/)
+
 - Add to .env file
+
 4. Get an api key from [Open Cage Geolocation](https://opencagedata.com/)
+
 - Add to .env file
 
 In the project directory, you can run:
@@ -45,4 +54,3 @@ The build is minified and the filenames include the hashes.<br />
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
