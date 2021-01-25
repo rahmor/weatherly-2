@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import lodash from 'lodash';
 import CONDITIONS from '../../utilities/conditions';
 import './Current.css';
@@ -28,8 +28,8 @@ const Current = ({ current, fetched, matches }) => {
           </p>
         </div>
         <img
-          src={`http://openweathermap.org/img/wn/${current.icon}@4x.png`}
-          srcSet={`http://openweathermap.org/img/wn/${current.icon}@2x.png 100w, 
+          src={`https://openweathermap.org/img/wn/${current.icon}@4x.png`}
+          srcSet={`https://openweathermap.org/img/wn/${current.icon}@2x.png 100w, 
         http://openweathermap.org/img/wn/${current.icon}@4x.png 200w`}
           sizes={`(min-width:768) 100w , 200w`}
           alt='Weather Icon'

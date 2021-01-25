@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import Daily from '../Daily/Daily';
 import Current from '../Current/Current';
 import SearchForm from '../SearchForm/SearchForm';
@@ -20,6 +20,7 @@ import './App.css';
 export function App(props) {
   useEffect(() => {
     props.fetchWeather(coordinates, city);
+    // eslint-disable-next-line
   }, []);
 
   const matches = useMediaQuery('(min-width: 768px)');
