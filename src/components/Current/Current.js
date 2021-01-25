@@ -30,7 +30,7 @@ const Current = ({ current, fetched, matches }) => {
         <img
           src={`https://openweathermap.org/img/wn/${current.icon}@4x.png`}
           srcSet={`https://openweathermap.org/img/wn/${current.icon}@2x.png 100w, 
-        http://openweathermap.org/img/wn/${current.icon}@4x.png 200w`}
+        https://openweathermap.org/img/wn/${current.icon}@4x.png 200w`}
           sizes={`(min-width:768) 100w , 200w`}
           alt='Weather Icon'
         ></img>

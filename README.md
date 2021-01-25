@@ -5,7 +5,13 @@ Find it live at [Weatherly](https://weatherly-2.vercel.app/)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-This app design was inspired by ![The inspiration](./src/assets/weatherly.jpg) and ![The inspiration](./src/assets/IMG_0285.PNG)
+This app design was inspired by
+
+![The inspiration](./src/assets/weatherly.jpg)
+
+and
+
+![The other inspiration](./src/assets/IMG_0200.PNG)
 
 ## Running Weatherly:
 
